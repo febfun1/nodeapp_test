@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build febfun/nodeapp
+          dockerImage = docker build -t febfun/nodeapp .'
         }
       }
     }
